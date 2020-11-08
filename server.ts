@@ -35,6 +35,9 @@ const router = new Router()
       const result = await dependencies(query.url as string);
 
       if (result[0] === 0) {
+        ctx.response.headers.set("Access-Control-Allow-Origin", "*");
+        // ctx.response.headers
+        // Access-Control-Allow-Origin: *
         ctx.response.body = result[1];
         ctx.response.type = "application/json";
       } else {
