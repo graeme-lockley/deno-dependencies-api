@@ -21,9 +21,11 @@ echo "  password $HEROKU_PASSWORD" >> ~/.netrc
 
 # heroku login -i
 
-heroku git:clone -a deno-dependencies-api
+export REPO_NAME=deno-dependencies-api
 
-cd deno-api-heroku
+heroku git:clone -a $REPO_NAME
+
+cd $REPO_NAME
 
 git config user.email "graeme.lockley@gmail.com"
 git config user.name "Graeme Lockley"
@@ -31,7 +33,7 @@ git config user.name "Graeme Lockley"
 echo "v1.5.0" > runtime.txt
 
 cp ../Procfile .
-cp ../greeter.ts .
+cp ../control.ts .
 cp ../server.ts .
 
 git add .
