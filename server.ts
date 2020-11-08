@@ -4,7 +4,7 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak/mod.ts";
-import { dependencies, greet } from "./control.ts";
+import { dependencies } from "./control.ts";
 import * as Flags from "https://deno.land/std@0.66.0/flags/mod.ts";
 
 const port = () => {
