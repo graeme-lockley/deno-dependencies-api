@@ -21,7 +21,7 @@ echo "  password $HEROKU_PASSWORD" >> ~/.netrc
 
 # heroku login -i
 
-heroku git:clone -a deno-api-heroku
+heroku git:clone -a deno-dependencies-api
 
 cd deno-api-heroku
 
